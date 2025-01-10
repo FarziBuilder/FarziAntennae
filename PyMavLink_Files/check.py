@@ -1,7 +1,7 @@
 from pymavlink import mavutil
 
 # Replace 'COM21' with the actual COM port of your telemetry module
-connection = mavutil.mavlink_connection('COM18', baud=57600)
+connection = mavutil.mavlink_connection('COM21', baud=57600)
 
 # Wait for a heartbeat from any system
 connection.wait_heartbeat()
