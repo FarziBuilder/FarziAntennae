@@ -1,10 +1,11 @@
 #include <Servo.h>
 
-Servo myservo; // create servo object to control a servo
+Servo myservo1; // create servo object to control a servo
+Servo myservo2;
 
 void setup() {
   // Attach the servo to GPIO pin 3 (or another PWM-capable pin)
-  myservo.attach(2); // Change pin as per your 
+  myservo1.attach(2); // Change pin as per your 
   Serial.begin(9600);
   // myservo.write(90);
   // delay(1000);
@@ -14,13 +15,12 @@ void setup() {
 
 void loop() {
   //Sweep the servo from 0° to 180° in steps of 10°
-  // for (float i = 25; i <= 150; i += 0.5) {
-  //   myservo.write(i);   // Set servo position
-  //   delay(100);        // Wait for the servo to reach the position
-  //   Serial.print("i Angle: ");
-  //   Serial.println(i);
-  // }
-  myservo.write(75);
-  delay(1000);
-
+  for (float i = 20; i <= 75; i += 0.5) {
+    myservo1.write(i);   // Set servo position
+    delay(500);        // Wait for the servo to reach the position
+    Serial.print("i Angle: ");
+    Serial.println(i);
+  }
+  // myservo.write(90);
+  // delay(1000);
 }
